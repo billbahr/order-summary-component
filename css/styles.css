@@ -3,13 +3,13 @@
     /* Primary colors */
     --paleblue: hsl(225, 100%, 94%);
     --brightblue: hsl(245, 75%, 52%);
+    --purple: hsl(245, 83%, 68%); /* hover states */
 
     /* Neutral colors */
     --verypaleblue: hsl(225, 100%, 98%);
     --desatblue: hsl(224, 23%, 55%);
     --darkblue: hsl(223, 47%, 23%);
     --white: hsl(0, 0%, 100%);
-    --gray:	hsl(225, 7%, 65%);
 
     /* fonts */
     --sans: "Red Hat Display", Helvetica, sans-serif;
@@ -29,27 +29,32 @@ body {
     background: var(--paleblue) url(/images/pattern-background-desktop.svg) no-repeat 0 0; 
     background-size: 100%;    
 }
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
 .component {
     border-radius: 20px;
     background-color: var(--white);
     max-width: 350px;
     text-align: center;
-    margin: 10rem auto;
+    padding-bottom: 1.5rem;
 }
 .component img {
     max-width: 100%;
     border-radius: 10px 10px 0 0;
+}
+.description {
+    margin: 1.5rem;
 }
 .component h1 {
     font-size: 1.6rem;
     font-weight: 900;
     color: black;
     margin-top: 2.2rem;
-}
-.component h2 {
-    font-size: 1rem;
-    font-weight: 900;
-    color: black;
 }
 .component p {
     color: var(--desatblue);
@@ -59,16 +64,69 @@ body {
     background-color: var(--verypaleblue);
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 0 40px;
+    gap: 1rem;
+    padding: .9rem;
+}
+.pricing img {
+    flex-grow: 1;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+}
+.pricing .plan {
+    flex-grow: 2;
+    text-align: left;
+}
+.pricing a {
+    flex-grow: 1;
+}
+.plan h2 {
+    font-size: 1rem;
+    font-weight: 900;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+.plan p {
+    margin: 0;
+    padding: 0;
+}
+.pricing a {
+    font-size: .9rem;
+    font-weight: 700;
+}
+.pricing a:hover {
+    text-decoration: none;
+    color: var(--purple);
+    cursor: pointer;
 }
 button {
     background-color: var(--brightblue);
     color: var(--white);
-    border-radius: 5px;
+    border-radius: 10px;
     display: block;
-    margin: 0 auto;
+    margin: 1.5rem auto;
+    width: 100%;
+    padding: 1.2rem 0;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    filter: drop-shadow(0 1rem .5rem var(--paleblue));
+}
+button:hover {
+    background-color: var(--purple);
+    cursor: pointer;
+}
+.cancel {
+    text-decoration: none;
+    color: var(--desatblue);
+    font-weight: 900;
+    font-size: .9rem;
+}
+.cancel:hover {
+    color:black;
+    cursor: pointer;
 }
 /* footer */
 footer {
