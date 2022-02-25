@@ -33,6 +33,7 @@ Users should be able to:
 ### Links
 
 [Solution Repo](https://github.com/billbahr/order-summary-component)
+
 [Live Site](https://billbahr.github.io/order-summary-component)
 
 ## My process
